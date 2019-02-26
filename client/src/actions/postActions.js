@@ -12,6 +12,7 @@ import {
 
 // Add post
 export const addPost = postData => dispatch => {
+  dispatch(clearErrors());
   axios
     .post("/api/posts", postData)
     .then(res =>
